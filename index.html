@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Series Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff5f0;
+    }
+
+    header {
+      background-color: #fc8019;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #fc8019;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #fc8019;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e56e14;
+    }
+
+    .payment {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: #fff3e6;
+    }
+
+    .success {
+      color: green;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  Test Series Booking
+</header>
+
+<div class="container">
+  <h2>Book Your Test</h2>
+
+  <form id="bookingForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
+    
+    <select required>
+      <option value="">Select Test Series</option>
+      <option>NEET Crash Series</option>
+      <option>Full Syllabus Test</option>
+      <option>Physics Special Batch</option>
+    </select>
+
+    <button type="submit">Proceed to Pay ₹199</button>
+  </form>
+
+  <div class="payment" id="paymentBox">
+    <p>Processing Payment...</p>
+    <p class="success">✅ Payment Status: Processing Granted</p>
+  </div>
+
+</div>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("paymentBox").style.display = "block";
+  });
+</script>
+
+</body>
+      </html>
